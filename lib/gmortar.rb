@@ -26,11 +26,11 @@ module Gmortar
     cmd = ["gcloud","builds","submit"]
     if source
       cmd << source
-      cmd += ["--gcs-log-dir", log_bucket]
       cmd += ["--gcs-source-staging-dir", source_bucket]
     else
       cmd << "--no-source"
     end
+    cmd += ["--gcs-log-dir", log_bucket]
 
     cmd += ["--config", gcloud_config.path]
     cmd += ["--project", project]
