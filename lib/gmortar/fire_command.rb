@@ -20,7 +20,7 @@ module Gmortar
         [:shot, name],
       ]
 
-      Gmortar.run project, "fire.yaml", source: source, variables: variables, name: name, debug: debug
+      Gmortar.run project, "fire.yaml", source: source, variables: variables, name: name, debug: debug?
     end
   end
 end
