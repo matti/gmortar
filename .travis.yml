@@ -21,7 +21,7 @@ jobs:
 deploy:
   - provider: releases
     api_key:
-      secure: ""
+      secure: "DfeplChvxXvUFwm4cTlzh4L+BIXOhOH+kGR+50fBA/iQl1EK2EpQqvsIezHI/qyEFYu68FTAsF00HQZ2R3gmSg75JGxMo0AWw/Aoqh013E87HjvaCk3kW5Gf6pDbPprHy36Z5phmK98gf5SC+WIf2nKwPo+lhkQ1AHoxUUddW9PHjJKgLpny/kJ8O6jIw00CgcQZHxpH9k70B92pFOfmW6K1DP92FrenKmHGyub+D5kdeKbOuDH3CI4Xvl7kGTp06KNagDYIozoB3UMWmd9kgIZIpysP5ALLx79Nbm9z7aEwDRC5ICD268PdgeDEtxdwyEP9+kSUq13DxIDYjexRnJaUmaTH+jbRT/ZxJ7p7ATXEUFap+MPinHGIxg0JheIAw1AxS8mnOVp2gU4r6I43diIia+JdW6hm6dJzknXf1S1NRaA8dD3mSbM4eaZSHhzyXzkIHFnCfFAvIH6YKO/7RaE4YtWV3Bezw18wI66bsreDPviZGWM0UCcGRRJ7PFLr+AW6U21GVKwpyrlJXUYFMaat/TfUHGml9dAtVi/JmrfMxRwTcOpgmN6lkN2/UDQ44Mtv/1upgGYS0HDPzPBdpCwQsjt+m8/VeH61HaYvvGMRqOjNMP4wvTXpgB21L3aifYTQgrMl6w6hpw420jyxw6J+o3AuIzKwvFXPUaVrjQk="
     file_glob: true
     file: releases/*
     skip_cleanup: true
@@ -29,6 +29,6 @@ deploy:
       tags: true
   - provider: rubygems
     api_key:
-      secure: ""
+      secure: "dwuwaBtcqJf0gd2ZpNTYp7hsoN5wT25K8XcM3sfesDY5HZ7T0RfDSRjZ1zyoFRuC/DfSZx09IHYwjBr3ieHqVVflitrrnScgWIahi3HI0HtsZOZiBL0diqm/PC8ODjLsIaD3Ny4B9yYDh4jvd4mB8HpU+KHe5iKHpnbnPhKpHxF4HRq9gwl2/C3cD5nfwq6Wmn/IEArrZ4VOH8NdjHRXbhYoDN+t4wIILrgA3axE0+t7GWot3Oe25UQehfNCdLotQWY7cgJWUYSQ6VwODft3xrMzur+sxra8Blk7NrJm3nmCh5Si0DeEFgist/KHj1rA2sh1UKgMaT9lgm4NyTaLlXsgi492OwuT1piLfiQTOS3yXvz+FGCE0mQEdSIBTTocg8gWtUjRIH/TcbkeZmFY1m0vZT1cX9Lpo7GEGpfabg6a8YkcaTw6mpdt7evNBJ2ckYuP0DePsJHlKcGG4MtBbh15BwLlHiNJeTY9TE5LVAUpaFcdwIq/rPvtM/J2VTP7xKuxTj8b2nx9ianJFTE6XW+QTthRh8K9UlBOizpYyOt0kpJi+Fd3o5p0ZrtS6zGZwja4WcwYHk7WRHdq4kZ6WTmIfk2dBa6x0qkzpA64EJy0McW5YXoeQc+yPkEKkikuFdZnVt0zIiShNvTjkMdMouS1WsMchYROwNwyt5mzG4w="
     on:
       branch: master
