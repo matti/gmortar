@@ -1,0 +1,34 @@
+stages:
+  - name: binary
+    if: tag IS present
+
+jobs:
+  include:
+    - stage: binary
+      os: osx
+      sudo: required
+      rvm:
+        - "2.6"
+      before_install:
+        - curl -L https://github.com/matti/gem2exe/releases/download/v0.3.2/gem2exe-darwin-amd64-v0.3.2.gz | gunzip - > gem2exe
+        - chmod a+x gem2exe
+        - sudo mv gem2exe /usr/local/bin/gem2exe
+        - gem2exe setup
+      script:
+        - mkdir releases
+        - gem2exe local --out releases/gmortar-darwin-amd64-${TRAVIS_TAG} gmortar
+
+deploy:
+  - provider: releases
+    api_key:
+      secure: ""
+    file_glob: true
+    file: releases/*
+    skip_cleanup: true
+    on:
+      tags: true
+  - provider: rubygems
+    api_key:
+      secure: ""
+    on:
+      branch: master

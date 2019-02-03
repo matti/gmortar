@@ -1,0 +1,18 @@
+steps:
+  - name: 'gcr.io/$PROJECT_ID/mortar'
+    env:
+      - CLOUDSDK_COMPUTE_REGION=<%= @gke_region %>
+      - CLOUDSDK_CONTAINER_CLUSTER=<%= @gke_name %>
+    args:
+      - fire
+      - -d
+      - --var
+      - build_id=$BUILD_ID
+      - --var
+      - project_id=$PROJECT_ID
+<% @variables.each do |var| %>
+      - --var
+      - <%= var %>
+<% end %>
+      - .
+      - <%= @name %>
