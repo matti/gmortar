@@ -5,6 +5,18 @@ stages:
 jobs:
   include:
     - stage: binary
+      os: linux
+      services:
+        - docker
+
+      before_install:
+        - docker pull mattipaksula/gem2exe
+      script:
+        - mkdir releases
+        - docker run --name gem2exe -it --volume $(pwd):/gem mattipaksula/gem2exe local --path /gem --out /tmp/gmortar gmortar
+        - docker cp gem2exe:/tmp/gmortar releases/gmortar-linux-amd64-${TRAVIS_TAG}
+
+    - stage: binary
       os: osx
       sudo: required
       rvm:
