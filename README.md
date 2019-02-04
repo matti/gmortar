@@ -12,3 +12,19 @@ Then
     gmortar list     gcloud_project europe-north1 gke_name
     gmortar describe gcloud_project europe-north1 gke_name shotname
     gmortar yank     gcloud_project europe-north1 gke_name shotname
+
+
+## install
+
+See latest release https://github.com/matti/gmortar/releases
+
+Linux binary:
+
+    wget https://github.com/matti/gmortar/releases/download/v0.3.0/gmortar-linux-amd64-v0.3.0
+    chmod +x gmortar-linux-amd64-v0.3.0
+
+Mac binary:
+
+    https://github.com/matti/gmortar/releases/download/v0.3.0/gmortar-darwin-amd64-v0.3.0
+    chmod +x gmortar-darwin-amd64-v0.3.0
+    
